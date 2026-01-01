@@ -1,0 +1,80 @@
+# Hospital AI Service Dependencies - Minimal Version
+# FastAPI-based microservice for AI/ML operations
+
+# Core Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Database & ORM
+sqlalchemy==2.0.23
+alembic==1.13.1
+asyncpg==0.29.0
+redis==5.0.1
+
+# Basic ML Libraries (compatible with Python 3.13)
+numpy==1.25.2
+pandas==2.1.4
+
+# HTTP & API
+httpx==0.25.2
+aiohttp==3.9.1
+requests==2.31.0
+
+# Message Queue
+aiokafka==0.9.0
+
+# Utilities
+python-dotenv==1.0.0
+pyyaml==6.0.1
+click==8.1.7
+rich==13.7.0
+typer==0.9.0
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+# Coverage and mocking
+pytest-cov==4.1.0  # Code coverage reporting
+pytest-mock==3.12.0  # Enhanced mocking capabilities
+pytest-xdist==3.5.0  # Parallel test execution
+coverage[toml]==7.3.2  # Coverage configuration via pyproject.toml
+# httpx is already listed above under HTTP & API; avoid duplicate entries
+
+# Development
+black==23.11.0
+isort==5.13.2
+flake8==6.1.0
+mypy==1.7.1
+bandit==1.7.5  # Security linter for Python
+safety==2.3.5  # Dependency vulnerability scanner
+
+# Monitoring
+prometheus_client==0.17.1
+
+# Python Version Requirement
+# Python runtime constraint: prefer Python 3.11 for ML ecosystem stability
+# Note: This file documents package versions; set Python interpreter to 3.11.x in your environment
+
+# Machine Learning Libraries (Python 3.11 compatible)
+scikit-learn==1.3.2
+joblib==1.3.2
+imbalanced-learn==0.11.0
+xgboost==2.0.3
+
+# Model Explainability
+shap==0.44.0
+
+# Feature Engineering
+category-encoders==2.6.3
+
+# Deep Learning framework (CPU-only)
+# Chosen: PyTorch (CPU-only). This provides a reliable, well-supported
+# framework for vision and general-model workloads. If you prefer
+# TensorFlow instead, uncomment the tensorflow lines below.
+torch==2.2.0
+torchvision==0.17.0
+
+# Alternative (TensorFlow CPU-only) - uncomment to enable
+# tensorflow==2.15.*
