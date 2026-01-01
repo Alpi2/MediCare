@@ -1,0 +1,22 @@
+# Common default properties for hospital-common
+spring:
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    deserialization:
+      fail-on-unknown-properties: false
+    default-property-inclusion: non_null
+  main:
+    allow-bean-definition-overriding: false
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+    hibernate:
+      ddl-auto: validate
+
+# Auditing
+hospital:
+  auditing:
+    default-auditor: system
